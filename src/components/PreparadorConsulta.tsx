@@ -42,12 +42,13 @@ export function PreparadorConsulta() {
   const tituloResultado = useRef<HTMLHeadingElement>(null);
   const mensajeRef = useRef<HTMLTextAreaElement>(null);
 
-  // Los enlaces "No sé" de otras secciones preseleccionan esa opción; el desplazamiento al ancla sigue siendo nativo.
+  // Los enlaces de otras secciones con data-preseleccion marcan esa opción; el desplazamiento al ancla sigue siendo nativo.
   useEffect(() => {
     const alHacerClic = (evento: MouseEvent) => {
       const enlace = (evento.target as Element | null)?.closest<HTMLAnchorElement>("a[data-preseleccion]");
-      if (enlace?.dataset.preseleccion === "no-se") {
-        setDatos((d) => ({ ...d, observo: "no-se" }));
+      const valor = enlace?.dataset.preseleccion;
+      if (valor === "abejas" || valor === "avispas" || valor === "no-se") {
+        setDatos((d) => ({ ...d, observo: valor }));
         setErrores((e) => ({ ...e, observo: undefined }));
       }
     };

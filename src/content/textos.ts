@@ -14,7 +14,7 @@ export const hero = {
   enlaceReubicacion: "Ver qué pasa con las abejas que se reubican",
   fotoAlt:
     "Apicultor con traje de protección amarillo retira panales de una abertura en una pared de ladrillo, bajo el alero de una casa.",
-  fotoPie: "Retiro de panales en una abertura de pared.",
+  fotoPie: "Fotografía: retiro de panales en una abertura de pared. Las ilustraciones del sitio son representativas.",
 } as const;
 
 export const servicio = {
@@ -43,27 +43,62 @@ export const servicio = {
 } as const;
 
 export const reubicacion = {
-  titulo: "El retiro es parte del recorrido.",
+  titulo: "Qué pasa después del retiro.",
   lead: "Las colonias rústicas de abejas que se reubican son trasladadas a apiarios trazabilizados en distintos predios del sur de Uruguay.",
-  etapas: [
-    {
-      id: "hallazgo",
-      titulo: "El lugar del hallazgo",
-      texto: "Se evalúa el caso donde la colonia se instaló y se define si corresponde retirarla y reubicarla.",
+  selector: "Elegí qué tenés y mirá cómo sigue:",
+  recorridos: {
+    abejas: {
+      etiqueta: "Abejas",
+      etapas: [
+        {
+          id: "hallazgo",
+          titulo: "El lugar del hallazgo",
+          texto: "Se evalúa el caso donde la colonia se instaló y se define si corresponde retirarla y reubicarla.",
+        },
+        {
+          id: "traslado",
+          titulo: "El traslado",
+          texto: "Cuando la colonia se reubica, sale del lugar del hallazgo con rumbo a un apiario.",
+        },
+        {
+          id: "apiario",
+          titulo: "El apiario de destino",
+          texto: "Llega a un apiario trazabilizado, en uno de los distintos predios del sur de Uruguay.",
+        },
+      ],
     },
-    {
-      id: "traslado",
-      titulo: "El traslado",
-      texto: "Cuando la colonia se reubica, sale del lugar del hallazgo con rumbo a un apiario.",
+    avispas: {
+      etiqueta: "Avispas",
+      etapas: [
+        {
+          id: "nido",
+          titulo: "El nido en su lugar",
+          texto: "Se evalúa el nido donde se instaló, antes de decidir cómo intervenir.",
+        },
+        {
+          id: "resolucion",
+          titulo: "La resolución",
+          texto:
+            "Según el caso, se resuelve la situación. La forma de intervenir se confirma con el equipo. No hay traslado a apiarios: ese destino es solo para colonias de abejas.",
+        },
+      ],
     },
-    {
-      id: "apiario",
-      titulo: "El apiario de destino",
-      texto: "Llega a un apiario trazabilizado, en uno de los distintos predios del sur de Uruguay.",
+    "no-se": {
+      etiqueta: "No sé",
+      etapas: [
+        { id: "contas", titulo: "Nos contás qué ves", texto: "Qué observás y dónde está, sin acercarte a mirar." },
+        { id: "orientamos", titulo: "Te orientamos", texto: "Con esos datos te decimos cómo seguir, sin que tengas que identificar el insecto." },
+        {
+          id: "camino",
+          titulo: "Sigue el recorrido que corresponde",
+          texto: "Si son abejas, el recorrido de la colonia. Si son avispas, la resolución del nido.",
+        },
+      ],
     },
-  ],
+  },
+  accion: "Consultar mi caso",
   fotoAlt: "Panales a la vista en una abertura de pared de ladrillo durante un retiro.",
-  nota: "Esquema explicativo: no es un mapa ni el seguimiento de un caso real. El destino en apiarios corresponde solo a las colonias de abejas que se reubican; los nidos de avispas se resuelven por separado.",
+  nota: "Esquema explicativo con ilustraciones representativas: no es un mapa ni el seguimiento de un caso real. El destino en apiarios corresponde solo a las colonias de abejas que se reubican; los nidos de avispas se resuelven por separado.",
 } as const;
 
 export const proceso = {
@@ -170,5 +205,5 @@ export const pie = {
     { etiqueta: "Consulta", destino: "#consulta" },
   ],
   propuesta:
-    "Propuesta de rediseño. Demostración sin publicar: los pasos del proceso, las indicaciones de seguridad y los contactos están pendientes de validación del cliente.",
+    "Propuesta de rediseño. Demostración sin publicar: las ilustraciones son representativas y no corresponden a casos reales; los pasos del proceso, las indicaciones de seguridad y los contactos están pendientes de validación del cliente.",
 } as const;

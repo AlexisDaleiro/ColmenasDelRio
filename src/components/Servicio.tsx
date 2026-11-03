@@ -1,4 +1,5 @@
 import { servicio } from "@/content/textos";
+import { EscenaNido, EscenaPared } from "./Escenas";
 import { Flecha } from "./iconos";
 
 export function Servicio() {
@@ -12,6 +13,7 @@ export function Servicio() {
 
         <div className="servicio-bloques">
           <article className="servicio-bloque">
+            <EscenaPared className="escena servicio-escena" />
             <h3 className="t-h3">{abejas.titulo}</h3>
             {abejas.parrafos.map((p) => (
               <p key={p} className="medida">
@@ -26,6 +28,7 @@ export function Servicio() {
           </article>
 
           <article className="servicio-bloque">
+            <EscenaNido className="escena servicio-escena" />
             <h3 className="t-h3">{avispas.titulo}</h3>
             {avispas.parrafos.map((p) => (
               <p key={p} className="medida">
