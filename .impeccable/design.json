@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T00:00:00Z",
+  "title": "Design System: Colmenas del Río",
+  "extensions": {
+    "colorMeta": {
+      "paper": { "role": "neutral", "displayName": "Marfil Mineral", "canonical": "#f4f0e7", "tonalRamp": ["#2a2822", "#4a473d", "#756f60", "#a39c8a", "#cec8ba", "#e4dfd2", "#f4f0e7", "#fffcf6"] },
+      "surface": { "role": "neutral", "displayName": "Marfil Claro", "canonical": "#fffcf6", "tonalRamp": ["#2a2822", "#4a473d", "#756f60", "#a39c8a", "#cec8ba", "#e4dfd2", "#f4f0e7", "#fffcf6"] },
+      "ink": { "role": "neutral", "displayName": "Tinta Verdeazulada", "canonical": "#172f35", "tonalRamp": ["#0b1719", "#172f35", "#2c4a50", "#52615d", "#6f7a76", "#a1adaa", "#c3d0cc", "#e6ecea"] },
+      "river": { "role": "primary", "displayName": "Río Profundo", "canonical": "#173c46", "tonalRamp": ["#0b1d22", "#10303a", "#173c46", "#2a5864", "#4a7883", "#7a9ba4", "#acc3c9", "#dbe6e9"] },
+      "wax": { "role": "secondary", "displayName": "Cera Ámbar", "canonical": "#d5a13d", "tonalRamp": ["#3d2d0b", "#69501a", "#9a7527", "#d5a13d", "#e4b655", "#f4c75e", "#f7dc9b", "#fcf1d4"] },
+      "error": { "role": "neutral", "displayName": "Error Óxido", "canonical": "#9b2c1f", "tonalRamp": ["#2c0d09", "#521811", "#7a2218", "#9b2c1f", "#bc5a4d", "#d68b81", "#ebbcb5", "#f8e3e0"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Titular del hero. Archivo 800, ancho 80 %, escala por container query." },
+      "headline": { "displayName": "Headline", "purpose": "Títulos de sección. Archivo 780, ancho 84 %." },
+      "title": { "displayName": "Title", "purpose": "Pasos y bloques de servicio. Archivo 720, ancho 90 %." },
+      "serif-lead": { "displayName": "Frase serif", "purpose": "Una sola frase de relato en Reubicación. Source Serif 4 regular." }
+    },
+    "shadows": [
+      { "name": "anillo-seleccion", "value": "inset 0 0 0 1px #172f35", "purpose": "Refuerza la opción marcada de un grupo de selección. No hay sombras proyectadas." }
+    ],
+    "motion": [
+      { "name": "dur-feedback", "value": "150ms", "purpose": "Botones, bordes y enlaces." },
+      { "name": "dur-ui", "value": "260ms", "purpose": "Menú móvil, preguntas, resultado del formulario. 150ms con movimiento reducido." },
+      { "name": "dur-editorial", "value": "560ms", "purpose": "Transiciones editoriales. 150ms con movimiento reducido." },
+      { "name": "ease-out", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Curva por defecto." },
+      { "name": "ease-in-out", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Curva alternativa." },
+      { "name": "move-sm", "value": "0.5rem", "purpose": "Desplazamiento de entrada pequeño; 0 con movimiento reducido." },
+      { "name": "move-md", "value": "1rem", "purpose": "Desplazamiento del menú móvil; 0 con movimiento reducido." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "40rem" },
+      { "name": "md", "value": "48rem" },
+      { "name": "lg", "value": "64rem" },
+      { "name": "max", "value": "80rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón cera",
+      "kind": "button",
+      "refersTo": "button-cera",
+      "description": "Acción principal: consultar un retiro.",
+      "html": "<button class=\"ds-btn-cera\">Consultar un retiro</button>",
+      "css": ".ds-btn-cera{min-height:3rem;padding:.7rem 1.4rem;border:2px solid transparent;border-radius:6px;background:#d5a13d;color:#172f35;font:inherit;font-weight:700;cursor:pointer;transition:background-color 150ms cubic-bezier(.22,1,.36,1),transform 150ms cubic-bezier(.22,1,.36,1)}.ds-btn-cera:hover{background:#e4b655}.ds-btn-cera:active{transform:translateY(1px)}.ds-btn-cera:focus-visible{outline:3px solid #172f35;outline-offset:3px}"
+    },
+    {
+      "name": "Botón con línea",
+      "kind": "button",
+      "refersTo": "button-linea",
+      "description": "Acción secundaria: llamar por teléfono.",
+      "html": "<button class=\"ds-btn-linea\">Llamar al 099 498 294</button>",
+      "css": ".ds-btn-linea{min-height:3rem;padding:.7rem 1.4rem;border:2px solid currentColor;border-radius:6px;background:transparent;color:#172f35;font:inherit;font-weight:700;cursor:pointer;transition:background-color 150ms cubic-bezier(.22,1,.36,1)}.ds-btn-linea:hover{background:color-mix(in srgb,currentColor 9%,transparent)}.ds-btn-linea:focus-visible{outline:3px solid #172f35;outline-offset:3px}"
+    },
+    {
+      "name": "Campo de texto",
+      "kind": "input",
+      "refersTo": "entrada",
+      "description": "Campo del preparador de consulta, con etiqueta y ayuda.",
+      "html": "<label class=\"ds-campo\"><span class=\"ds-etiqueta\">Dirección</span><input class=\"ds-entrada\" placeholder=\"Calle y barrio\"></label>",
+      "css": ".ds-campo{display:block}.ds-etiqueta{display:block;font-weight:700}.ds-entrada{display:block;width:100%;min-height:3rem;margin-top:.5rem;padding:.7rem .9rem;border:1.5px solid #6f7a76;border-radius:6px;background:#fffcf6;color:#172f35;font:inherit;transition:border-color 150ms cubic-bezier(.22,1,.36,1)}.ds-entrada::placeholder{color:#52615d}.ds-entrada:hover{border-color:#172f35}.ds-entrada:focus-visible{outline:3px solid #172f35;outline-offset:3px}"
+    },
+    {
+      "name": "Nodo de ruta",
+      "kind": "custom",
+      "description": "Nodos de la ruta sobre río: anillo de cera y nodo lleno de destino.",
+      "html": "<div class=\"ds-ruta\"><span class=\"ds-nodo\"></span><span class=\"ds-nodo ds-fin\"></span></div>",
+      "css": ".ds-ruta{display:flex;gap:2rem;padding:1.5rem;background:#173c46}.ds-nodo{width:1.75rem;height:1.75rem;border:2px solid #d5a13d;border-radius:50%;background:#173c46}.ds-fin{background:#d5a13d;outline:2px solid #d5a13d;outline-offset:3px}"
+    },
+    {
+      "name": "Paso numerado",
+      "kind": "custom",
+      "description": "Nodo numerado del proceso; el último va lleno de cera.",
+      "html": "<div class=\"ds-pasos\"><span class=\"ds-num\">1</span><span class=\"ds-num ds-ultimo\">3</span></div>",
+      "css": ".ds-pasos{display:flex;gap:2rem;padding:1rem;background:#f4f0e7}.ds-num{display:grid;place-items:center;width:2.75rem;height:2.75rem;border:2px solid #172f35;border-radius:50%;background:#f4f0e7;color:#172f35;font-size:1.25rem;font-weight:800}.ds-ultimo{background:#d5a13d}"
+    }
+  ],
+  "narrative": {
+    "northStar": "La Ruta del Apiario",
+    "overview": "La página cuenta un trabajo de campo como un recorrido preciso: del lugar del hallazgo al apiario de destino. Marfil mineral de fondo, tinta verdeazulada para leer, un único campo de río profundo para la reubicación y cera ámbar solo en acciones y nodos. Nodo, línea fina y curva de río son el único motivo gráfico recurrente. Sistema plano, sin ornamento de miel ni de plaga, con la fotografía propia del cliente como única prueba visual.",
+    "keyCharacteristics": [
+      "Un solo campo de color profundo (río) en toda la página.",
+      "Una sola familia tipográfica (Archivo variable) más una frase en Source Serif 4.",
+      "Plano por defecto: sin sombras proyectadas.",
+      "Nodo, línea y curva como único motivo gráfico.",
+      "Movimiento corto, nativo de CSS, con versión estática completa."
+    ],
+    "rules": [
+      { "name": "La Regla de la Cera", "body": "La cera aparece en acciones y en nodos de la ruta, nada más. Nunca como fondo de sección ni como degradé.", "section": "colors" },
+      { "name": "La Regla del Único Río", "body": "Hay un solo campo de color profundo en la página (Reubicación). El pie usa tinta, no un segundo campo de color.", "section": "colors" },
+      { "name": "La Regla del Texto Oscuro sobre Cera", "body": "El texto sobre cera es siempre tinta; el marfil sobre cera no alcanza contraste.", "section": "colors" },
+      { "name": "La Regla de una Sola Familia", "body": "Los titulares se diferencian por ancho y peso de Archivo, no por mezclar familias.", "section": "typography" },
+      { "name": "La Regla de la Frase Serif", "body": "Source Serif 4 se usa en una frase de relato; no se extiende a titulares ni se combina con cursivas.", "section": "typography" },
+      { "name": "La Regla del Balance", "body": "Los h1 a h3 llevan text-wrap: balance y los párrafos text-wrap: pretty.", "section": "typography" },
+      { "name": "La Regla Plana", "body": "Las superficies están planas en reposo y en hover; el estado se comunica con borde, color o subrayado, no con elevación.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar cera (#d5a13d) solo en acciones y nodos de la ruta, siempre con texto tinta.",
+      "Do mantener un solo campo de río profundo y reutilizar el motivo de nodo y curva para cualquier secuencia nueva.",
+      "Do dar a cada control un objetivo de al menos 2.75rem y mostrar foco con anillo de 3px y separación de 3px.",
+      "Do expresar los errores con texto e ícono además del color.",
+      "Do pasar todo número, correo o canal por src/config/contacto.ts y el texto por src/content/textos.ts.",
+      "Do ofrecer siempre la versión estática del movimiento (sin soporte o con movimiento reducido)."
+    ],
+    "donts": [
+      "Don't usar fondos de hexágonos o panal como papel tapiz.",
+      "Don't poner eyebrows o kickers sobre los titulares.",
+      "Don't armar rejillas de tarjetas con ícono, título y texto.",
+      "Don't usar texto con degradé, vidrio esmerilado ni sombras proyectadas.",
+      "Don't animar abejas que siguen el cursor, ni usar marquesinas, contadores animados, cursor personalizado o secuestro del scroll.",
+      "Don't mezclar cursivas serif en cada titular; el serif es una frase.",
+      "Don't afirmar precios, atención 24/7, zonas de cobertura ni certificaciones: no están confirmados.",
+      "Don't usar imágenes de banco, imágenes generadas ni evidencia inventada (casos, testimonios, cifras).",
+      "Don't usar rojo de urgencia ni degradé ámbar de marca de miel."
+    ]
+  }
+}

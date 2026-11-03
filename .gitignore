@@ -1,0 +1,13 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env*.local
+.playwright-mcp/
+.unlighthouse/
+.impeccable/mocks/
+.impeccable/review/
+.DS_Store
+.next-prod/
+.next-dev-wa/
